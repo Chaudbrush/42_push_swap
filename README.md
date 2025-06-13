@@ -28,3 +28,4 @@
 
 ### Visual Representation of Stack B
   - Just one screenshot to show how stack B is after every number is pushed to it
+  ![Screenshot 0](./ss/stack_b.png)
