@@ -6,11 +6,11 @@
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 18:26:48 by vloureir          #+#    #+#             */
-/*   Updated: 2025/06/09 12:00:10 by vloureir         ###   ########.fr       */
+/*   Updated: 2025/06/13 10:41:17 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	init_array_and_organize(t_list *lst)
 {

@@ -6,11 +6,11 @@
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 10:03:52 by vloureir          #+#    #+#             */
-/*   Updated: 2025/06/12 21:18:36 by vloureir         ###   ########.fr       */
+/*   Updated: 2025/06/13 10:41:30 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	fake_quicksort(t_list **a, t_list **b)
 {

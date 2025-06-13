@@ -6,11 +6,11 @@
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 14:14:23 by vloureir          #+#    #+#             */
-/*   Updated: 2025/06/12 21:17:19 by vloureir         ###   ########.fr       */
+/*   Updated: 2025/06/13 10:40:22 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	rotate_a(t_list **lst, int flag)
 {

@@ -6,12 +6,12 @@
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 22:08:14 by vloureir          #+#    #+#             */
-/*   Updated: 2025/06/12 21:22:07 by vloureir         ###   ########.fr       */
+/*   Updated: 2025/06/13 10:41:43 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap_bonus.h"
-#include "./get_next_line/get_next_line.h"
+#include "../includes/push_swap_bonus.h"
+#include "../get_next_line/get_next_line.h"
 
 void	get_input_and_check(t_list **a, t_list **b)
 {

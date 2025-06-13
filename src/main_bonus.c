@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/01 14:01:46 by vloureir          #+#    #+#             */
-/*   Updated: 2025/06/12 21:15:32 by vloureir         ###   ########.fr       */
+/*   Created: 2025/06/11 16:39:38 by vloureir          #+#    #+#             */
+/*   Updated: 2025/06/13 10:41:09 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap_bonus.h"
+#include "../get_next_line/get_next_line.h"
 
 int	main(int argc, char **argv)
 {
@@ -33,33 +34,8 @@ int	main(int argc, char **argv)
 			return (free_allocs(a, b), 1);
 		}
 	}
-	if (check_sorted(a, b))
-		return (free_allocs(a, b), 0);
-	if (init_array_and_organize(a) == -1)
-		return (free_allocs(a, b), 1);
-	choose_sort(&a, &b);
+	get_input_and_check(&a, &b);
 	free_allocs(a, b);
-}
-
-void	choose_sort(t_list **a, t_list **b)
-{
-	int		size;
-	t_print	*commands;
-
-	commands = output_parse();
-	size = ft_lst_size(*a);
-	if (size == 2)
-		swap_a(a, 1);
-	else if (size == 3)
-		sort_three(a);
-	else if (size == 4)
-		sort_four_five(a, b, 1);
-	else if (size == 5)
-		sort_four_five(a, b, 2);
-	else if (size > 5)
-		fake_quicksort(a, b);
-	print_commands(commands);
-	clear_print(commands);
 }
 
 int	split_to_int(t_list **lst, t_list *node, char *str, int i)
@@ -101,9 +77,7 @@ int	check_sorted(t_list *a, t_list *b)
 	while (ptr->next)
 	{
 		if (ptr->num > ptr->next->num)
-		{
 			return (0);
-		}
 		ptr = ptr->next;
 	}
 	return (1);

@@ -6,7 +6,7 @@
 #    By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/10 17:09:12 by vloureir          #+#    #+#              #
-#    Updated: 2025/06/13 09:15:32 by vloureir         ###   ########.fr        #
+#    Updated: 2025/06/13 10:43:50 by vloureir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,14 +16,15 @@ NAME := push_swap
 
 NAME_BONUS := checker
 
-SRC_MAIN := main.c
+SRC_MAIN := src/main.c
 
-SRC := functions_a.c functions_b.c organize_data.c \
-		parse_data.c parse_print.c quicksort_array.c quicksort_list.c \
-		small_sort.c utils_list.c utils_print.c utils_sorting.c
+SRC := src/functions_a.c src/functions_b.c src/organize_data.c \
+		src/parse_data.c src/parse_print.c src/quicksort_array.c \
+		src/quicksort_list.c src/small_sort.c src/utils_list.c \
+		src/utils_print.c src/utils_sorting.c
 
-SRC_BONUS := main_bonus.c get_next_line/get_next_line.c \
-			utils_bonus.c get_next_line/get_next_line_utils.c
+SRC_BONUS := src/main_bonus.c get_next_line/get_next_line.c \
+			src/utils_bonus.c get_next_line/get_next_line_utils.c
 
 OBJ_MAIN := $(SRC_MAIN:.c=.o)
 
@@ -33,7 +34,11 @@ OBJ_BONUS := $(SRC_BONUS:.c=.o)
 
 OBJ := $(SRC:.c=.o)
 
-HEADER := push_swap.h
+INC := -I includes
+
+HEADER := includes/push_swap.h
+
+HEADER_BONUS := includes/push_swap_bonus.h
 
 CFLAGS := -Wall -Wextra -Werror
 
@@ -48,13 +53,13 @@ OFF := \033[0m
 all: $(NAME)
 
 $(NAME): $(OBJ) $(OBJ_MAIN) $(HEADER)
-	$(CC) $(OBJ) $(OBJ_MAIN) -o $(NAME) -I.
+	$(CC) $(OBJ) $(OBJ_MAIN) -o $(NAME) $(INC)
 	@echo "$(GREEN) Push_Swap Compiled $(OFF)"
 
 bonus: $(NAME_BONUS)
 
-$(NAME_BONUS): $(OBJ) $(OBJ_BONUS) $(HEADER)
-	$(CC) $(OBJ) $(OBJ_BONUS) -o $(NAME_BONUS) -I.
+$(NAME_BONUS): $(OBJ) $(OBJ_BONUS) $(HEADER) $(HEADER_BONUS)
+	$(CC) $(OBJ) $(OBJ_BONUS) -o $(NAME_BONUS) $(INC)
 	@echo "$(GREEN) Checker Compiled $(OFF)"
 
 clean:

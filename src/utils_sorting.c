@@ -6,11 +6,11 @@
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 12:27:35 by vloureir          #+#    #+#             */
-/*   Updated: 2025/06/10 13:11:47 by vloureir         ###   ########.fr       */
+/*   Updated: 2025/06/13 10:41:53 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	my_abs(int a)
 {

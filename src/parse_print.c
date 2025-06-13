@@ -6,11 +6,11 @@
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 14:04:01 by vloureir          #+#    #+#             */
-/*   Updated: 2025/06/12 14:52:36 by vloureir         ###   ########.fr       */
+/*   Updated: 2025/06/13 10:41:22 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 t_print	*output_parse(void)
 {
