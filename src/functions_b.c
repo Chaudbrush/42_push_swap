@@ -6,7 +6,7 @@
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 14:14:23 by vloureir          #+#    #+#             */
-/*   Updated: 2025/06/13 10:40:29 by vloureir         ###   ########.fr       */
+/*   Updated: 2025/06/13 22:36:48 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	swap_b(t_list **lst, int flag)
 	(*lst)->num = (*lst)->next->num;
 	(*lst)->next->num = tmp;
 	if (flag)
-		ft_lstadd_back(&commands, ft_lst_new_single("sa\n"));
+		ft_lstadd_back(&commands, ft_lst_new_single("sb\n"));
 }
 
 void	push_b(t_list **a, t_list **b, int flag)

@@ -6,11 +6,13 @@
 #    By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/10 17:09:12 by vloureir          #+#    #+#              #
-#    Updated: 2025/06/13 10:43:50 by vloureir         ###   ########.fr        #
+#    Updated: 2025/06/13 22:47:54 by vloureir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#MAKEFLAGS += --silent
+ifndef VERBOSE
+MAKEFLAGS += --silent
+endif
 
 NAME := push_swap
 
