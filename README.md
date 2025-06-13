@@ -5,6 +5,7 @@
   - We have two stacks at our disposal to use (stack A and stack B) and are only allowed to use a certain type of moves for the project, so most regular algorithms won't work.
 
 ### How the Algorithm Works
+  - Start by normalizing the numbers, so we work from 1 to N numbers, intead of working with the original numbers we get
   - We initially divide every number in stack A by chunks
   - Then we push to B each chunks, from the smallest to biggest ones
   - After pushing to B, we check if that number, is in the upper half of the chunk it is in, or the lower half (one example, if our chunk is from number 1-20, the lower half would be 1-10, upper half 11-20)
